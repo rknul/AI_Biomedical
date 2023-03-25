@@ -1,19 +1,30 @@
-# Binary Classification using SRGAN
-The goal of this project is to generate 128x128 images from 32x32 images using SRGAN and inputting these generated images through a binary classifier. This method will be compared with just having the original images inserted into the binary classifier.
+#Binary Classification using SRGAN (Super-Resolution Generative Adversarial Network)
+This project aims to develop a machine learning model that can generate a higher-resolution image from a 32x32 image which would then be fed into a binary classifier to obtain similar results to a binary classifier being fed the original image with sizes varying around 128x128.
 
-# Creating the Binary Classifier
-Download the Kaggle Retinal OCT dataset
-Import the required libraries
-Create the directory to your datasets
-Set training parameters
-Create data generators using ImageDataGenerator()
-Build the binary model and train it on the Kaggle dataset
+#Installation
+To run the code, you’ll need to have the following libraries/modules installed:
+* Tensorflow
+* Keras
+* NumPy
+* Matplotlib
+* OpenCV
+* OS
+* PIL
 
-# Creating the SRGAN
-Use the same Kaggle dataset
-Import required libraries
-Resize the images to 128x128 and 32x32 and store both in their own directories
-Define the generator and discriminator models
-Train the generator and discriminator for more than 50 epochs on the 32x32 images to be able to generate higher resolution images.
+#Dataset
+The dataset used in this project was the Kaggle Retinal OCT dataset. However, the dataset used in this project is the tiny version of the original dataset which contains 2000 training images and 500 testing images.
 
+#Preprocessing
+Before using the images, the images within the dataset were all scaled to 128x128 images using the Image function from the PIL library and placed into another folder.
 
+#Model
+There are three models defined in the project.
+* Generator Model
+* Discriminative Model
+* SRGAN Model
+
+#Running the code
+To run the code, a data generator is required. The data generators were created using the ImportDataGenerator module. After that, the SRGAN model is initialized and takes a 32x32 input. Fit() is then performed on the SRGAN to train the model over 100 epochs with callbacks to generate an image and store it into a separate file. 
+
+#Future Plans
+The outcome for this project isn’t what was expected. The goal of this project was to insert a 32x32 image and obtain a higher-resolution image.  However, the product of this project was a picture that didn’t seem to look any better than the downscaled version of the original image. In fact, it looked worse. Future plans for this project is to fix the SRGAN model.
