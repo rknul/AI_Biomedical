@@ -2,7 +2,7 @@
 This project aims to develop a machine learning model that can generate a higher-resolution image from a 32x32 image which would then be fed into a binary classifier to obtain similar results to a binary classifier being fed the original image with sizes varying around 128x128.
 
 #Installation
-To run the code, you’ll need to have the following libraries/modules installed:
+To run the code, youâ€™ll need to have the following libraries/modules installed:
 * Tensorflow
 * Keras
 * NumPy
@@ -27,4 +27,7 @@ There are three models defined in the project.
 To run the code, a data generator is required. The data generators were created using the ImportDataGenerator module. After that, the SRGAN model is initialized and takes a 32x32 input. Fit() is then performed on the SRGAN to train the model over 100 epochs with callbacks to generate an image and store it into a separate file. 
 
 #Future Plans
-The outcome for this project isn’t what was expected. The goal of this project was to insert a 32x32 image and obtain a higher-resolution image.  However, the product of this project was a picture that didn’t seem to look any better than the downscaled version of the original image. In fact, it looked worse. Future plans for this project is to fix the SRGAN model.
+The outcome for this project isnâ€™t what was expected. The goal of this project was to insert a 32x32 image and obtain a higher-resolution image.  However, the product of this project was a picture that didnâ€™t seem to look any better than the downscaled version of the original image. In fact, it looked worse. Future plans for this project is to fix the SRGAN model.
+
+#Conclusion
+The purpose of this project was to compare the performance of training a binary classifier on the original kaggle dataset with the performance of training a binary classifier on the SRGAN generated images. However, the SRGAN generated images in this project couldn't be made sense of. Therefore, I concluded that it wasn't worth inserting those SRGAN generated images into the binary classifier.
